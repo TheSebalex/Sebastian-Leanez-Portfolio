@@ -16,6 +16,17 @@ body{
     margin: 0;
 }
 
+#background{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1000;
+}
+
 nav{
     width: 100%;
     display: grid;
@@ -53,6 +64,31 @@ nav ul li:hover, nav ul li a:hover{
     transition: transform,color, .2s;
 }
 
+#contact{
+    padding: .5vw;
+    border-radius: 2vw;
+    animation-name: colours;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.252);
+}
+
+@keyframes colours{
+    0%{
+        background-color: rgb(32, 0, 148);
+    }
+    100%{
+        background: rgb(131, 0, 145);
+    }
+}
+
+
+#contact a{
+    color: white;
+}
+
 #logo{
     width: 65%;
     animation-delay: 2s;
@@ -87,15 +123,18 @@ nav ul li:hover, nav ul li a:hover{
     justify-content: center;
     position:static;
     margin-top: 0;
-    height: 68vw;
+    height: 80vw;
+    clip-path: circle(300% at 50% -240%);
 }
 
 #skills{
-    width: 100%;
+    margin: auto;
+    width: 90%;
     display: grid;
     grid-template-columns: 60% 40%;
-    background: rgb(0,36,13);
-    background: linear-gradient(49deg, rgba(0,36,13,1) 0%, rgba(9,100,121,1) 100%);
+    background-color: rgba(0, 0, 0, 0.265);
+    border-radius: 5vw;
+    margin-top: 10vw;
 }
 
 #skills img, #workExperience img{
@@ -120,11 +159,13 @@ nav ul li:hover, nav ul li a:hover{
 }
 
 #workExperience{
-    width: 100%;
+    margin: auto;
+    width: 90%;
     display: grid;
     grid-template-columns: 60% 40%;
-    background: rgb(6,0,36);
-    background: linear-gradient(49deg, rgba(6,0,36,1) 0%, rgba(121,9,32,1) 100%);
+    background-color: rgba(0, 0, 0, 0.265);
+    border-radius: 5vw;
+    margin-top: 8vw;
 }
 
 #aboutMe>h1, .coursesPersonal>h1{
@@ -140,10 +181,13 @@ nav ul li:hover, nav ul li a:hover{
 }
 
 #aboutMe{
+    margin: auto;
+    width: 90%;
     padding-top: 8%;
-    background: rgb(0,36,13);
-    background: linear-gradient(49deg, rgba(0,36,13,1) 0%, rgba(9,100,121,1) 100%);
     color: white;
+    background-color: rgba(0, 0, 0, 0.265);
+    border-radius: 5vw;
+    margin-top: 8vw;
 }
 
 #aboutMe > h1{
