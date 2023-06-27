@@ -73,12 +73,74 @@ nav ul li:hover, nav ul li a:hover{
     margin: 1vw 2vw;
     padding: 1vw;
     border-radius: 2vw;
+    cursor: pointer;
     animation-name: colours;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: linear;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.252);
+}
+
+.contactDeploy{
+    position: fixed;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+    top: 5%;
+    z-index: 100000;
+    background-color: rgb(91, 91, 91);
+    display: none;
+    justify-content: center;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    text-align: center;
+    border-radius: 3vw;
+    box-shadow: 0 10px 30px 5px;
+}
+
+.contactDeploy ul a li{
+    margin-top: 25%;
+    list-style: none;
+    background-color: black;
+    padding: 1.5vw;
+    border-radius: 25vw;
+    
+}
+
+.contactDeploy ul a li, .contactDeploy ul a{
+    font-size: 4vw;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: filter .5s;
+}
+
+.contactDeploy ul a li img{
+    width: 5vw;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    align-self: center;   
+}
+
+.contactDeploy ul a:hover{
+    filter: invert();
+    transition: filter .5s;
+}
+
+.contactDeploy > img{
+    width: 5vw;
+    position: absolute;
+    left: 3vw;
+    top: 3vw;
+}
+
+.contactDeploy > img:hover{
+    cursor: pointer;
+    filter: invert();
+    transition: filter .5s;
+}
+
+.contactDeployed{
+    display: grid;
 }
 
 @keyframes colours{
@@ -91,7 +153,7 @@ nav ul li:hover, nav ul li a:hover{
 }
 
 
-#contact li{
+#contact{
     color: white;
 }
 
@@ -386,7 +448,7 @@ footer div p{
     margin-top: 5vw;
 }
 
-.deploy ul li a{
+.deploy ul li a, #contactMeResponsive{
     font-size: 4vw;
 }
 
@@ -397,6 +459,7 @@ footer div p{
 }
 
 .deployed{
+    overflow-y: scroll;
     clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
     transition: all 1s;
 }
