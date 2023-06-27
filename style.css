@@ -1,7 +1,8 @@
 * {
     padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: .3vw;
+    scroll-behavior: smooth;
 }
 
 h1{
@@ -31,27 +32,30 @@ nav{
     width: 100%;
     display: grid;
     grid-template-columns: 16.5% 83.5%;
-    position: absolute;
+    position: sticky;
+    top: 0;
     left: 0;
-    margin-top: 2vw;
     z-index: 1;
+    background-color: rgb(0, 0, 0);
 }
 
 nav ul {
+    margin: 1vw auto;
     display: flex;
     justify-content: center;
     justify-self: flex-end;
+    height: inherit;
 }
 
 
 nav ul li{
     list-style: none;
     margin: auto 3vw;
-    transition: transform,color, 1s;
+    transition: width,color, 1s;
     text-align: center;
 }
 
-nav ul li a{
+nav ul li a, nav ul li{
     text-decoration: none;
     text-transform: uppercase;
     color: white;
@@ -65,7 +69,9 @@ nav ul li:hover, nav ul li a:hover{
 }
 
 #contact{
-    padding: .5vw;
+    text-decoration: none;
+    margin: 1vw 2vw;
+    padding: 1vw;
     border-radius: 2vw;
     animation-name: colours;
     animation-duration: 2s;
@@ -85,7 +91,7 @@ nav ul li:hover, nav ul li a:hover{
 }
 
 
-#contact a{
+#contact li{
     color: white;
 }
 
@@ -121,10 +127,10 @@ nav ul li:hover, nav ul li a:hover{
     background: linear-gradient(49deg, rgba(2,0,36,1) 0%, rgba(46,74,146,1) 46%, rgba(116,9,121,1) 97%);
     display: flex;
     justify-content: center;
-    position:static;
+    position: static;
     margin-top: 0;
-    height: 80vw;
-    clip-path: circle(300% at 50% -240%);
+    height: 65vw;
+    clip-path: circle(300% at 50% -290%);
 }
 
 #skills{
@@ -170,6 +176,14 @@ nav ul li:hover, nav ul li a:hover{
 
 #aboutMe>h1, .coursesPersonal>h1{
     text-align: center;
+}
+
+.coursesPersonal>img{
+    width: 80%;
+    border-radius: .5vw;
+    margin: auto;
+    display: flex;
+    margin-top: 4vw;
 }
 
 #aboutMeDiv{
@@ -238,5 +252,161 @@ h1{
     }
     100% {
         transform: rotate(0deg);
+    }
+}
+
+#projects{
+    margin: auto;
+    width: 90%;
+    padding-top: 8%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.265);
+    border-radius: 5vw;
+    margin-top: 8vw;
+    padding-bottom: 5vw;
+}
+
+#projects > h1{
+    margin-bottom: 5vw;
+    text-align: center;
+    animation-delay: 1s;
+    animation-name: roundingWord;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function:cubic-bezier(0, 0, 0, 0);
+}
+
+#projects ul li img{
+    width: 70%;
+    display: flex;
+    margin: auto;
+    border-radius: 5vw;
+    transition:box-shadow .2s;
+}
+
+#projects ul li{
+    list-style: none;
+    text-align: center;
+}
+
+#projects ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+#projects ul li img:hover{
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    transition: .2s;
+} 
+
+footer{
+    background-color: black;
+    position: relative;
+    top: 2vh;
+    margin-top: 5vw;
+}
+
+footer div{
+    padding: 2vw;
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    color: rgb(128, 128, 128);
+    
+}
+
+footer ul li{
+    list-style: none;
+}
+
+footer ul li a{
+    color: rgb(128, 128, 128);
+    text-decoration: none;
+    transition: color 1s;
+    font-size: 1.5vw;
+}
+
+footer ul li a:hover{
+    color: white;
+    transition: 1s;
+}
+
+footer div img:hover{
+    filter: brightness(5);
+    transition: 1s;
+}
+
+footer img {
+    width: 20vw;
+}
+
+footer div p{
+    font-size: 1.5vw;
+}
+
+.footerP{
+    letter-spacing: .1;
+    font-size: 1.5vw;
+}
+
+.footerPDerechos{
+    letter-spacing: normal;
+    text-align: center;
+    color: rgb(128, 128, 128);
+    font-size: 1vw;
+    padding: 1vw;
+}
+
+#svg{
+    display: none;
+    width: 8vw;
+    align-self: center;
+    justify-self: end;
+    margin: 4vw 5vw;
+}
+
+.deploy{
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(90, 90, 90);
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    transition: clip-path 1s;
+}
+
+.deploy ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.deploy ul li{
+    text-align: start;
+    margin-top: 5vw;
+}
+
+.deploy ul li a{
+    font-size: 4vw;
+}
+
+#ex{
+    width: 5vw;
+    margin-left: 4vw;
+    margin-top: 4vw;
+}
+
+.deployed{
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    transition: all 1s;
+}
+
+@media screen and (max-width: 720px) {
+    #navList, #contact{
+        display: none;
+    }
+
+    #svg{
+        display: block;
     }
 }

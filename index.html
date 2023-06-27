@@ -5,22 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="Img/favicon.png">
+    <script src="main.js" defer></script>
     <title>Sebastián Leañez</title>
 </head>
 <body>
     <nav>
         <ul>
-            <li id="contact"><a href="">Contact Me</a></li>
+            <a id="contact" href=""><li>Contact Me</li></a>
         </ul>
-        <ul>
-            <li><a href="">Main</a></li>
-            <li><a href="">Skills</a></li>
-            <li><a href="">Work<br>Experience</a></li>
-            <li><a href="">About Me</a></li>
-            <li><a href="">Projects</a></li>
+        <ul id="navList">
+            <li><a href="#main">Main</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#workExperience">Work Experience</a></li>
+            <li><a href="#aboutMe">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
         </ul>
+        <img id="svg" src="Img/three-dots.svg">
+        <div id="deploy" class="deploy">
+            <ul>
+                <img id="ex" src="Img/ex.svg">
+                <li><a href="">Contact Me</a></li>
+                <li><a href="#main">Main</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#workExperience">Work Experience</a></li>
+                <li><a href="#aboutMe">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </div>
     </nav>
-    <main>
+    <main id="main">
         <div id="contenedorPrincipal">
             <img src="Img/Recurso 1.svg" id="logo">
         </div>
@@ -40,7 +53,6 @@
             </div>
         </div>
         <div id="workExperience">
-            
             <img src="Img/Recurso 6.svg" alt="">
             <div>
                 <h1>Work<br>Experience</h1>
@@ -56,20 +68,21 @@
             <div id="aboutMeDiv">
                 <div class="coursesPersonal">
                     <h1>Personal</h1>
-                    <p>Hey, i’m a Venezuelan boy, 
+                    <p>Hey, i'm a Venezuelan boy, 
                         in love with tech, actually
                         with eighteen (18) years old
                         who is always looking to learn
                         new things, expanding their 
                         knowledge and new 
                         technologies.</p>
+                        <img src="Img/bandera.jpg" alt="">
                 </div>
                 <div class="coursesPersonal">
                     <h1>Courses</h1>
                     <p>- CodeAcademy<br>
                         Javascript (2023).<br><br>
                         - Coursera HTML/CSS (2023).<br><br>
-                        - Develoteca PHP (2023).<br><br>
+                        - Develoteca - PHP (2023).<br><br>
                         - Google Learn<br>
                         HTML/CSS(2023).<br><br>
                         - FreeCodeCamp JavaScript, <br>
@@ -77,6 +90,42 @@
                 </div>
             </div>
         </div>
+        <div id="projects">
+            <h1>Projects</h1>
+            <ul>
+                <li>
+                    <a href="https://thesebalex.github.io/RandoMath/" target="_blank">
+                        <img src="Img/randomath.png">
+                        <p>
+                            Randomath - Math tools <br>
+                            <span style="color: rgb(255, 157, 0);">
+                                HTML - CSS - Javascript</span>
+                            </p>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </main>
+    <footer>
+        <div>
+            <p class="footerP">
+                -Sebastian Leañez<br>-Developer
+            </p>
+            <a href="#main"><img src="Img/Recurso 10.svg"></a>
+            <ul>
+                <ul>
+                    <li><a href="#main">-Main</a></li>
+                    <li><a href="#skills">-Skills</a></li>
+                    <li><a href="#workExperience">-Work Experience</a></li>
+                    <li><a href="#aboutMe">-About Me</a></li>
+                    <li><a href="#projects">- Projects</a></li>
+                </ul>
+            </ul>
+        </div>
+        <p class="footerPDerechos">
+            All rights reserved<br>Sebastian Leañez - 2023
+
+        </p>
+    </footer>
 </body>
 </html>
