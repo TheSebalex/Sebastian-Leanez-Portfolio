@@ -96,6 +96,7 @@ nav ul li:hover, nav ul li a:hover{
     text-align: center;
     border-radius: 3vw;
     box-shadow: 0 10px 30px 5px;
+    overflow-y: scroll;
 }
 
 .contactDeploy ul a li{
@@ -103,8 +104,7 @@ nav ul li:hover, nav ul li a:hover{
     list-style: none;
     background-color: black;
     padding: 1.5vw;
-    border-radius: 25vw;
-    
+    border-radius: 25vw;   
 }
 
 .contactDeploy ul a li, .contactDeploy ul a{
