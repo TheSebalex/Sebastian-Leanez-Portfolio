@@ -92,15 +92,16 @@ nav ul li:hover, nav ul li a:hover{
     background-color: rgb(91, 91, 91);
     display: none;
     justify-content: center;
-    grid-template-rows: 33.33% 33.33% 33.33%;
+    grid-template-rows: 25% 25% 25%;
     text-align: center;
     border-radius: 3vw;
     box-shadow: 0 10px 30px 5px;
     overflow-y: scroll;
 }
 
+
 .contactDeploy ul a li{
-    margin-top: 25%;
+    margin: 15% auto;
     list-style: none;
     background-color: black;
     padding: 1.5vw;
@@ -450,9 +451,11 @@ footer div p{
 
 .deploy ul li a, #contactMeResponsive{
     font-size: 4vw;
+    cursor: pointer;
 }
 
 #ex{
+    cursor: pointer;
     width: 5vw;
     margin-left: 4vw;
     margin-top: 4vw;
