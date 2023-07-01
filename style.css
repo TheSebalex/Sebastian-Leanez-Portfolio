@@ -159,7 +159,10 @@ nav ul li:hover, nav ul li a:hover{
 }
 
 #logo{
+    margin: auto;
+    margin-top: 10%;
     width: 65%;
+    height: fit-content;
     animation-delay: 2s;
     animation-name: rounding;
     animation-duration: 10s;
@@ -192,8 +195,8 @@ nav ul li:hover, nav ul li a:hover{
     justify-content: center;
     position: static;
     margin-top: 0;
-    height: 65vw;
-    clip-path: circle(300% at 50% -290%);
+    height: 50vw;
+    clip-path: circle(400% at 50% -528%);
 }
 
 #skills{
@@ -371,15 +374,19 @@ h1{
 
 #projectNav ul li{
     margin: auto;
-    background-color: rgb(255, 255, 255);
-    padding: 1vw;
-    border-radius: 1vw;
 }
 
 #projectNav ul li a{
+    background-color: rgb(255, 255, 255);
+    padding: 1vw;
+    border-radius: 1vw;
     color: rgb(0, 0, 0);
     font-size: 2vw;
     text-decoration: none;
+}
+
+#projectNav ul li a:hover{
+    filter: invert();
 }
 
 #projects ul li img{
