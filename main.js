@@ -27,10 +27,41 @@ undeployContact.addEventListener("click", undeployedContact);
 buttonDeploy.addEventListener("click", addClass);
 buttonUnDeploy.addEventListener("click", removeClass);
 
-window.addEventListener("scroll", quitarClase);
-window.addEventListener("resize", quitarClase);
+window.addEventListener("scroll", removeClass);
+window.addEventListener("resize", removeClass);
 
 // Funciones
+
+
+let projects= {
+  images: ["Img/randomath.png", "Img/KillThePlane.png"],
+  url: ["https://thesebalex.github.io/RandoMath/", "https://thesebalex.github.io/KillThePlaneGame/"],
+  descriptions: ["Kill The Plane! - Browser Game", "Randomath - Math tools"]
+}
+function addProjects(){
+  for(let i = 0; i < projects.images.length; i++){
+    
+    let element = `
+    <li>
+        <a href=${projects.url[i]} target="_blank">
+        <img src=${projects.images[i]}>
+           <p>
+              ${projects.descriptions[i]} <br>
+              <span style="color: rgb(255, 157, 0);">
+              HTML - CSS - Javascript</span>
+           </p>
+         </a>
+    </li>
+    `
+    projectsScroll.insertAdjacentHTML("beforeend", element)
+  }
+}
+addProjects()
+
+
+
+
+
 
 function moveProjects(target) {
   projectsScroll.scroll(0, 0);
