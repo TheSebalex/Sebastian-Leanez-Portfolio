@@ -8,7 +8,7 @@
     <script src="main.js" defer></script>
     <title>Sebastián Leañez</title>
 </head>
-<body id="body">
+<body>
     <nav>
         <ul>
             <li id="contact">Contact Me</li>
@@ -45,6 +45,7 @@
         </div>
         <div id="contenedorPrincipal">
             <img src="Img/Recurso 1.svg" id="logo">
+        </div>
         </div>
         <img src="Img/background.jpg" id="background">
         <div id="skills">
@@ -102,13 +103,13 @@
         <div id="projects">
             <h1>Projects</h1>
             <div id="projectNav">
-                <ul>
-                    <li><a href="#p1">1</a></li>
-                    <li><a href="#p2">2</a></li>
+                <ul id="moveButtons">
+                    <li class="buttons" value="1"><</li>
+                    <li class="buttons" value="2">></li>
                 </ul>
             </div>
             <ul id="projectsScroll">
-                <li id="p1">
+                <li>
                     <a href="https://thesebalex.github.io/RandoMath/" target="_blank">
                         <img src="Img/randomath.png">
                         <p>
@@ -118,7 +119,7 @@
                             </p>
                     </a>
                 </li>
-                <li id="p2">
+                <li>
                     <a href="https://thesebalex.github.io/KillThePlaneGame/" target="_blank">
                         <img src="Img/KillThePlane.png">
                         <p>
@@ -149,7 +150,6 @@
         </div>
         <p class="footerPDerechos">
             All rights reserved<br>Sebastian Leañez - 2023
-
         </p>
     </footer>
 </body>

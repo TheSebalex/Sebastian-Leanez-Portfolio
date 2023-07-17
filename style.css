@@ -18,8 +18,8 @@ body{
 }
 
 #background{
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     position: fixed;
     left: 0;
     right: 0;
@@ -32,7 +32,7 @@ nav{
     width: 100%;
     display: grid;
     grid-template-columns: 16.5% 83.5%;
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
@@ -40,7 +40,7 @@ nav{
 }
 
 nav ul {
-    margin: 1vw auto;
+    margin: auto auto;
     display: flex;
     justify-content: center;
     justify-self: flex-end;
@@ -70,7 +70,7 @@ nav ul li:hover, nav ul li a:hover{
 
 #contact{
     text-decoration: none;
-    margin: 1vw 2vw;
+    margin: 5px 2vw;
     padding: 1vw;
     border-radius: 2vw;
     cursor: pointer;
@@ -80,6 +80,7 @@ nav ul li:hover, nav ul li a:hover{
     animation-direction: alternate;
     animation-timing-function: linear;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.252);
+    line-height: 1em;
 }
 
 .contactDeploy{
@@ -160,9 +161,8 @@ nav ul li:hover, nav ul li a:hover{
 
 #logo{
     margin: auto;
-    margin-top: 10%;
-    width: 65%;
-    height: fit-content;
+    align-self: center;
+    width: 70%;
     animation-delay: 2s;
     animation-name: rounding;
     animation-duration: 10s;
@@ -188,15 +188,12 @@ nav ul li:hover, nav ul li a:hover{
     }
 }
 
-#contenedorPrincipal{
-    background: rgb(2,0,36);
-    background: linear-gradient(49deg, rgba(2,0,36,1) 0%, rgba(46,74,146,1) 46%, rgba(116,9,121,1) 97%);
+#contenedorPrincipal{ 
     display: flex;
     justify-content: center;
     position: static;
     margin-top: 0;
-    height: 50vw;
-    clip-path: circle(400% at 50% -528%);
+    height: 100vh;
 }
 
 #skills{
@@ -285,9 +282,6 @@ nav ul li:hover, nav ul li a:hover{
     25% {
         transform: rotate(5deg);
     }
-    50%{
-        transform: rotate(0deg);
-    }
     75%{
         transform: rotate(-5deg);
     }
@@ -309,9 +303,6 @@ h1{
     }
     25% {
         transform: rotate(3deg);
-    }
-    50%{
-        transform: rotate(0deg);
     }
     75%{
         transform: rotate(-3deg);
@@ -374,19 +365,21 @@ h1{
 
 #projectNav ul li{
     margin: auto;
-}
-
-#projectNav ul li a{
     background-color: rgb(255, 255, 255);
-    padding: 1vw;
-    border-radius: 1vw;
+    width: 4vw;
+    height: 3.85vw;
+    padding-top: .15vw;
+    border-radius: 50%;
+    align-content: center;
     color: rgb(0, 0, 0);
-    font-size: 2vw;
-    text-decoration: none;
+    font-size: 2.5vw;
+    text-align: center;
 }
 
-#projectNav ul li a:hover{
-    filter: invert();
+#projectNav ul li:hover{
+    background-color: darkorange;
+    color: white;
+    cursor: pointer;
 }
 
 #projects ul li img{
@@ -460,7 +453,7 @@ footer div p{
 }
 
 .footerP{
-    letter-spacing: .1;
+    letter-spacing: .1vw;
     font-size: 1.5vw;
 }
 
@@ -518,6 +511,22 @@ footer div p{
     transition: all 1s;
 }
 
+@media screen and (max-width: 1080px){
+    nav ul li a, nav ul li{
+        font-size: 1.4vw;
+    }
+    .footerP, footer ul li a{
+        letter-spacing: .1vw;
+        font-size: 2.5vw;
+    }
+    h1{
+        font-size: 4.5vw;
+    }
+    p{
+        font-size: 2.5vw;
+    }
+}
+
 @media screen and (max-width: 720px) {
     #navList, #contact{
         display: none;
@@ -525,5 +534,11 @@ footer div p{
 
     #svg{
         display: block;
+    }
+    h1{
+        font-size: 5vw;
+    }
+    p{
+        font-size: 3vw;
     }
 }
