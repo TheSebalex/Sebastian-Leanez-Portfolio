@@ -97,7 +97,7 @@ nav ul li:hover, nav ul li a:hover{
     text-align: center;
     border-radius: 3vw;
     box-shadow: 0 10px 30px 5px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 
@@ -521,7 +521,6 @@ footer div p{
     #navList, #contact{
         display: none;
     }
-
     #svg{
         display: block;
     }
@@ -531,4 +530,17 @@ footer div p{
     p{
         font-size: 3vw;
     }
+    #projectNav ul li{
+        margin: auto;
+        background-color: rgb(255, 255, 255);
+        width: 6vw;
+        height: 6vw;
+        padding-top: .8vw;
+        border-radius: 50%;
+        align-content: center;
+        color: rgb(0, 0, 0);
+        font-size: 4vw;
+        text-align: center;
+    }
+    
 }

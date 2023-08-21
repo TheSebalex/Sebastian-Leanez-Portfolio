@@ -11,10 +11,38 @@ const menuContact = document.getElementById("contactDeploy");
 
 const projectsScroll = document.getElementById("projectsScroll");
 const moveButtonsFather = document.getElementById("moveButtons");
-const projectsButtonsScroll = document.querySelectorAll(".buttons");
 let currentScroll = 0;
 
+let projects = {
+  images: [
+    "Img/GRH21LadingPage.png",
+    "Img/KillThePlane.png",
+    "Img/randomath.png",
+    "Img/SWCLandingPage.png"
+  ],
+  url: [
+    "https://thesebalex.github.io/GRH21/",
+    "https://thesebalex.github.io/KillThePlaneGame/",
+    "https://thesebalex.github.io/RandoMath/",
+    "https://thesebalex.github.io/SWC/"
+  ],
+  descriptions: [
+    "GRH21 - Lading Page",
+    "Kill The Plane! - Browser Game", 
+    "Randomath - Math tools",
+    "SWC - Landing Page"
+  ],
+  languages: [
+    "HTML - CSS - Javascript",
+    "HTML - CSS - Javascript",
+    "HTML - CSS - Javascript",
+    "HTML - CSS - Javascript",
+  ]
+};
+
 // Eventos
+
+document.addEventListener("DOMContentLoaded", addProjects);
 
 moveButtonsFather.addEventListener("click", (e) => {
   moveProjects(e.target.value);
@@ -32,15 +60,8 @@ window.addEventListener("resize", removeClass);
 
 // Funciones
 
-
-let projects= {
-  images: ["Img/randomath.png", "Img/KillThePlane.png"],
-  url: ["https://thesebalex.github.io/RandoMath/", "https://thesebalex.github.io/KillThePlaneGame/"],
-  descriptions: ["Kill The Plane! - Browser Game", "Randomath - Math tools"]
-}
-function addProjects(){
-  for(let i = 0; i < projects.images.length; i++){
-    
+function addProjects() {
+  for (let i = 0; i < projects.images.length; i++) {
     let element = `
     <li>
         <a href=${projects.url[i]} target="_blank">
@@ -48,28 +69,21 @@ function addProjects(){
            <p>
               ${projects.descriptions[i]} <br>
               <span style="color: rgb(255, 157, 0);">
-              HTML - CSS - Javascript</span>
+              ${projects.languages[i]}</span>
            </p>
          </a>
     </li>
-    `
-    projectsScroll.insertAdjacentHTML("beforeend", element)
+    `;
+    projectsScroll.insertAdjacentHTML("beforeend", element);
   }
 }
-addProjects()
-
-
-
-
-
 
 function moveProjects(target) {
   projectsScroll.scroll(0, 0);
-  console.log(currentScroll)
   if (target == 2) {
-    if (currentScroll < projectsScroll.childElementCount-1){
-        currentScroll++;
-      }
+    if (currentScroll < projectsScroll.childElementCount - 1) {
+      currentScroll++;
+    }
     projectsScroll.scroll(projectsScroll.clientWidth * currentScroll, 0);
   } else {
     if (!currentScroll <= 0) {
